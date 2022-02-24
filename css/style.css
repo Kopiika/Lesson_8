@@ -1,0 +1,295 @@
+@import "null.css";
+
+
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;700&family=Monoton&family=Montserrat:wght@200;400;700&display=swap);
+/* 
+@font-face {
+	font-family: 'Alice in Wonderland';
+	src: url('AliceinWonderland.woff2') format('woff2'),
+		 url('AliceinWonderland.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+} */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background: url(../img/678x380.jpg) 0 0/ cover no-repeat;
+	
+}
+
+.conteiner{
+	max-width: 800px;
+	overflow: auto;
+	margin: 0 auto;
+	background: rgb(186,186,186);
+	background: linear-gradient(180deg, rgba(186,186,186,1) 0%, rgba(39,131,140,0.7511379551820728) 35%, rgba(65,148,105,1) 100%);	
+}
+
+
+*{
+	font-family:'Cormorant Infant', serif;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 1.6;
+	color: white;
+}
+
+/* убрала обводку */
+*:focus{
+	outline: none;
+}
+/* добавила точки по контуру */
+a:focus{
+	border: 10px dotted violet;
+}
+.section-1{
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.tittle{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 50px;
+	letter-spacing: 2px;
+	margin-bottom: 40px;
+	padding-top: 30px;
+	color: rgb(255, 247, 240);
+	text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+h3{
+	font-size: 30px;
+	text-transform: uppercase;
+	text-shadow: 0 0 15px black;
+}
+
+[class*="subtittle-"]::after{
+	content: "";
+	display: block;
+	height: 3px;
+	background-color: rgb(250, 246, 246);
+	width: 100%;
+	margin: 8px 0 0 0;
+}
+
+
+.section-heroes a{
+	display: inline-block;
+	min-width: 100px;
+	padding: 15px 30px;
+	margin: 10px 10px 0 0;
+	/* max-height: 70px; */
+	background: linear-gradient(rgba(47,29,77,1) 0%, rgba(136,14,201,1) 100%);
+	color: white;
+	letter-spacing: 1px;
+	font-weight: 700;
+	border-radius: 20px;
+}
+
+.section-heroes{
+	margin-bottom: 50px;
+}
+
+.section-heroes>*:last-child{
+	margin-right: 0;
+}
+
+/* Heroes */
+#section-alice, #section-caterpillar, #section-cat, 
+#section-hatter, #section-rabbit, #section-qween {
+	display: none;
+}
+[class*="img-"]{
+	max-width: 500px;
+	margin-bottom: 50px;
+	border-radius: 20px;
+	box-shadow: 0 0 50px 15px rgb(0, 0, 0);
+
+}
+[class*="text-"]{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 700;
+	color: white;
+}
+
+.section-heroes a:hover{
+	color: yellow;
+}
+
+.section-heroes a:active{
+	box-shadow: inset 0 0 25px 0 black;
+}
+
+#section-alice:target, #section-caterpillar:target, #section-cat:target,
+#section-hatter:target, #section-rabbit:target, #section-qween:target{
+	display: block;
+	margin: 0 auto;
+}
+
+.conteiner-block{
+	margin-bottom: 60px;
+}
+
+/* button */
+.button-link{
+	background-color: rgb(177, 42, 75);
+	display: inline-block;
+	border-radius: 30px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+	box-shadow: 0 6px 0 0 rgb(39, 39, 39);
+	padding: 15px 30px;
+}
+
+.button-link:hover{
+	box-shadow: 0 5px 0 0 rgb(39, 39, 39);
+	margin: 2px 0 0 0;
+	background-color:  rgb(228, 61, 103);
+}
+
+.button-link:active{
+	box-shadow: inset 0 0px 10px 0 rgb(39, 39, 39);
+	margin: 6px 0 0 0;
+}
+
+#section-read{
+	display: none;
+}
+#section-read:target{
+	display: block;
+}
+
+/* =================================== */
+
+.section-2{
+	max-width: 400px;
+	margin: 0 auto;
+	
+}
+
+/* убрать отступ у любого последнего элемента */
+.section-2>*:last-child{
+	margin-bottom: 0;
+}
+
+.content-list li{
+	margin-bottom: 10px;
+	color: white;
+	border-radius: 20px;
+	padding: 10px 15px 10px 25px;
+	
+}
+
+.content-list li:nth-child(odd){
+	background: rgb(45, 158, 173);
+}
+
+.content-list li:nth-child(even){
+	background: rgb(159, 154, 161);
+}
+
+.content-list li:nth-child(6){
+	background: rgb(62, 124, 62);
+}
+
+.content-list{
+	counter-reset: item;
+}
+.content-list li::before{
+	counter-increment:item;
+	content: "Глава " counter(item) "." ;
+	margin: 0 10px 0 0;
+	color: yellow;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-shadow: 0 0 5px rgb(112, 107, 107);
+}
+
+.content-list li:hover{
+	background: rgb(226, 175, 35);
+	
+}
+
+.content-list li:active{
+	color: yellow;
+	text-shadow: 0 0 5px rgb(112, 107, 107);
+}
+
+[class*="link-chapter"]{
+	display: inline-block;
+}
+
+[class*="link-chapter"]:visited{
+	color: rgb(56, 52, 55);
+}
+
+
+#chapter1, #chapter2, #chapter3, #chapter4, #chapter5, #chapter6,
+ #chapter7, #chapter8, #chapter9, #chapter10, #chapter11, #chapter12 {
+	display: none;
+}
+
+#chapter1:target, #chapter2:target, #chapter3:target, #chapter4:target, #chapter5:target,
+ #chapter6:target, #chapter7:target, #chapter8:target, #chapter9:target,
+  #chapter10:target, #chapter11:target, #chapter12:target{
+	display: block;
+	min-height: 615px;
+}
+
+.conteiner-chapters{
+	padding: 0 30px 0;
+}
+
+h3{
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.paragraph{
+	margin-bottom: 15px;
+	text-align: justify;
+	text-indent: 25px;
+	font-size: 22px;
+}
+
+
+.paragraph::first-letter{
+	font-size: 35px;
+	font-weight: 700;
+	color:rgb(177, 42, 75);
+	text-shadow: 0 0 5px rgb(241, 238, 238);
+	
+}
+
+#chapter12:last-child::after{
+	content: "Конец";
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: 700;
+	color:rgb(177, 42, 75);
+	text-shadow: 0 0 5px rgb(241, 238, 238);
+}
+
+/* картинка исчезает при наведении */
+.picture-chapter6{
+	max-width: 500px;
+	margin: 0 auto 20px;
+}
+
+.picture-chapter6 img{
+	border-radius: 20px;
+	box-shadow: 0 0 50px 15px rgb(0, 0, 0);
+}
+
+.section-chapter6:hover .picture-chapter6{
+	visibility: hidden;;
+}
